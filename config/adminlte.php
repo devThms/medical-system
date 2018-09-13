@@ -11,9 +11,9 @@ return [
     | of your page. You can override it per page with the title section.
     | You can optionally also specify a title prefix and/or postfix.
     |
-    */
+ */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'Medical Assistant',
 
     'title_prefix' => '',
 
@@ -28,11 +28,11 @@ return [
     | You can use basic HTML here if you want. The logo has also a mini
     | variant, used for the mini side bar. Make it 3 letters or so
     |
-    */
+     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Medical </b>Assistant',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<b>M</b>ass',
 
     /*
     |--------------------------------------------------------------------------
@@ -43,9 +43,9 @@ return [
     | blue, black, purple, yellow, red, and green. Each skin also has a
     | ligth variant: blue-light, purple-light, purple-light, etc.
     |
-    */
+     */
 
-    'skin' => 'blue',
+    'skin' => 'yellow-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -56,9 +56,9 @@ return [
     | null, 'boxed', 'fixed', 'top-nav'. null is the default, top-nav
     | removes the sidebar and places your menu in the top navbar
     |
-    */
+     */
 
-    'layout' => null,
+    'layout' => 'fixed',
 
     /*
     |--------------------------------------------------------------------------
@@ -69,7 +69,7 @@ return [
     | bar. To adjust your sidebar layout simply set this  either true
     | this is compatible with layouts except top-nav layout option
     |
-    */
+     */
 
     'collapse_sidebar' => false,
 
@@ -83,7 +83,7 @@ return [
     | You can set the request to a GET or POST with logout_method.
     | Set register_url to null if you don't want a register link.
     |
-    */
+     */
 
     'dashboard_url' => 'home',
 
@@ -105,59 +105,59 @@ return [
     | Font Awesome. A string instead of an array represents a header in sidebar
     | layout. The 'can' is a filter on Laravel's built in Gate functionality.
     |
-    */
+     */
 
     'menu' => [
         'MENU DE NAVEGACION',
         [
             'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'url' => 'admin/blog',
+            'can' => 'manage-blog',
         ],
         [
-            'text'        => 'Home',
-            'url'         => '/home',
-            'icon'        => 'file',
+            'text' => 'Home',
+            'url' => '/home',
+            'icon' => 'file',
 
         ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',
-            'url'  => 'admin/settings',
+            'url' => 'admin/settings',
             'icon' => 'user',
         ],
         [
             'text' => 'Change Password',
-            'url'  => 'admin/settings',
+            'url' => 'admin/settings',
             'icon' => 'lock',
         ],
         [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
+            'text' => 'Multilevel',
+            'icon' => 'share',
             'submenu' => [
                 [
                     'text' => 'Level One',
-                    'url'  => '#',
+                    'url' => '#',
                 ],
                 [
-                    'text'    => 'Level One',
-                    'url'     => '#',
+                    'text' => 'Level One',
+                    'url' => '#',
                     'submenu' => [
                         [
                             'text' => 'Level Two',
-                            'url'  => '#',
+                            'url' => '#',
                         ],
                         [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
+                            'text' => 'Level Two',
+                            'url' => '#',
                             'submenu' => [
                                 [
                                     'text' => 'Level Three',
-                                    'url'  => '#',
+                                    'url' => '#',
                                 ],
                                 [
                                     'text' => 'Level Three',
-                                    'url'  => '#',
+                                    'url' => '#',
                                 ],
                             ],
                         ],
@@ -165,21 +165,21 @@ return [
                 ],
                 [
                     'text' => 'Level One',
-                    'url'  => '#',
+                    'url' => '#',
                 ],
             ],
         ],
         'LABELS',
         [
-            'text'       => 'Important',
+            'text' => 'Important',
             'icon_color' => 'red',
         ],
         [
-            'text'       => 'Warning',
+            'text' => 'Warning',
             'icon_color' => 'yellow',
         ],
         [
-            'text'       => 'Information',
+            'text' => 'Information',
             'icon_color' => 'aqua',
         ],
     ],
@@ -194,7 +194,7 @@ return [
     | You can comment out the GateFilter if you don't want to use Laravel's
     | built in Gate functionality
     |
-    */
+     */
 
     'filters' => [
         JeroenNoten\LaravelAdminLte\Menu\Filters\HrefFilter::class,
@@ -213,11 +213,11 @@ return [
     | only DataTables is supported as a plugin. Set the value to true
     | to include the JavaScript file from a CDN via a script tag.
     |
-    */
+     */
 
     'plugins' => [
         'datatables' => true,
-        'select2'    => true,
-        'chartjs'    => true,
+        'select2' => true,
+        'chartjs' => true,
     ],
 ];

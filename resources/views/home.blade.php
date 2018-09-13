@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Medical-System')
+@section('title', 'Medical Assistant')
 
 @section('content_header')
     <h1>Dashboard</h1>
@@ -8,4 +8,134 @@
 
 @section('content')
     <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+    <p>You are logged in!</p>
+
 @stop

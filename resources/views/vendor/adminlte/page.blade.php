@@ -23,7 +23,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}" class="navbar-brand">
-                           <b>Medical System</b>
+                           <b>Medical Assistant</b>
                         </a>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                             <i class="fa fa-bars"></i>
@@ -41,9 +41,9 @@
             <!-- Logo -->
             <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>M</b>SYS</span>
+                <span class="logo-mini"><b>M</b>ass</span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>Medical System</b></span>
+                <span class="logo-lg"><b>Medical Assistant</b></span>
             </a>
 
             <!-- Header Navbar -->
