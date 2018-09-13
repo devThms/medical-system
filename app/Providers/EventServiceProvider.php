@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Providers;
+namespace IntelGUA\MedicalAssistant\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'IntelGUA\MedicalSystem\Events\Event' => [
-            'IntelGUA\MedicalSystem\Listeners\EventListener',
+        'IntelGUA\MedicalAssistant\Events\Event' => [
+            'IntelGUA\MedicalAssistant\Listeners\EventListener',
         ],
     ];
 

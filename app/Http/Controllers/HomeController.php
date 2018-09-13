@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Http\Controllers;
+namespace IntelGUA\MedicalAssistant\Http\Controllers;
 
 use Illuminate\Http\Request;
 

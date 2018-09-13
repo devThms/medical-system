@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Providers;
+namespace IntelGUA\MedicalAssistant\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'IntelGUA\MedicalSystem\Model' => 'IntelGUA\MedicalSystem\Policies\ModelPolicy',
+        'IntelGUA\MedicalAssistant\Model' => 'IntelGUA\MedicalAssistant\Policies\ModelPolicy',
     ];
 
     /**

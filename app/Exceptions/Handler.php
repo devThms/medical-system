@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Exceptions;
+namespace IntelGUA\MedicalAssistant\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

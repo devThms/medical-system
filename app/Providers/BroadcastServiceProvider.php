@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Providers;
+namespace IntelGUA\MedicalAssistant\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => IntelGUA\MedicalSystem\User::class,
+        'model' => IntelGUA\MedicalAssistant\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

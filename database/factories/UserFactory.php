@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(IntelGUA\MedicalSystem\User::class, function (Faker $faker) {
+$factory->define(IntelGUA\MedicalAssistant\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,

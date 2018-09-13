@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Http\Middleware;
+namespace IntelGUA\MedicalAssistant\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode as Middleware;
 

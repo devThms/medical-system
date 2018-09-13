@@ -52,7 +52,7 @@ return [
     |
      */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://mass.intelgua.test'),
 
     /*
     |--------------------------------------------------------------------------
@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        IntelGUA\MedicalSystem\Providers\AppServiceProvider::class,
-        IntelGUA\MedicalSystem\Providers\AuthServiceProvider::class,
-        // IntelGUA\MedicalSystem\Providers\BroadcastServiceProvider::class,
-        IntelGUA\MedicalSystem\Providers\EventServiceProvider::class,
-        IntelGUA\MedicalSystem\Providers\RouteServiceProvider::class,
+        IntelGUA\MedicalAssistant\Providers\AppServiceProvider::class,
+        IntelGUA\MedicalAssistant\Providers\AuthServiceProvider::class,
+        // IntelGUA\MedicalAssistant\Providers\BroadcastServiceProvider::class,
+        IntelGUA\MedicalAssistant\Providers\EventServiceProvider::class,
+        IntelGUA\MedicalAssistant\Providers\RouteServiceProvider::class,
 
     ],
 

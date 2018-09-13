@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Http;
+namespace IntelGUA\MedicalAssistant\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -14,11 +14,11 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \IntelGUA\MedicalSystem\Http\Middleware\CheckForMaintenanceMode::class,
+        \IntelGUA\MedicalAssistant\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \IntelGUA\MedicalSystem\Http\Middleware\TrimStrings::class,
+        \IntelGUA\MedicalAssistant\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \IntelGUA\MedicalSystem\Http\Middleware\TrustProxies::class,
+        \IntelGUA\MedicalAssistant\Http\Middleware\TrustProxies::class,
     ];
 
     /**
@@ -28,12 +28,12 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \IntelGUA\MedicalSystem\Http\Middleware\EncryptCookies::class,
+            \IntelGUA\MedicalAssistant\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \IntelGUA\MedicalSystem\Http\Middleware\VerifyCsrfToken::class,
+            \IntelGUA\MedicalAssistant\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -56,7 +56,7 @@ class Kernel extends HttpKernel
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \IntelGUA\MedicalSystem\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \IntelGUA\MedicalAssistant\Http\Middleware\RedirectIfAuthenticated::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];

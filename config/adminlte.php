@@ -108,7 +108,7 @@ return [
      */
 
     'menu' => [
-        'MENU DE NAVEGACION',
+        'Usuario: Dr. Rodriguez',
         [
             'text' => 'Blog',
             'url' => 'admin/blog',

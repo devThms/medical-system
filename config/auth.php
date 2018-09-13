@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => IntelGUA\MedicalSystem\User::class,
+            'model' => IntelGUA\MedicalAssistant\User::class,
         ],
 
         // 'users' => [

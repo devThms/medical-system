@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Http\Controllers\Auth;
+namespace IntelGUA\MedicalAssistant\Http\Controllers\Auth;
 
-use IntelGUA\MedicalSystem\Http\Controllers\Controller;
+use IntelGUA\MedicalAssistant\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

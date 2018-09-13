@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Console;
+namespace IntelGUA\MedicalAssistant\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

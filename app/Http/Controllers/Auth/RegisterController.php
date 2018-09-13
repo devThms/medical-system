@@ -1,9 +1,9 @@
 <?php
 
-namespace IntelGUA\MedicalSystem\Http\Controllers\Auth;
+namespace IntelGUA\MedicalAssistant\Http\Controllers\Auth;
 
-use IntelGUA\MedicalSystem\User;
-use IntelGUA\MedicalSystem\Http\Controllers\Controller;
+use IntelGUA\MedicalAssistant\User;
+use IntelGUA\MedicalAssistant\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -59,7 +59,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \IntelGUA\MedicalSystem\User
+     * @return \IntelGUA\MedicalAssistant\User
      */
     protected function create(array $data)
     {

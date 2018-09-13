@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    IntelGUA\MedicalSystem\Http\Kernel::class
+    IntelGUA\MedicalAssistant\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    IntelGUA\MedicalSystem\Console\Kernel::class
+    IntelGUA\MedicalAssistant\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    IntelGUA\MedicalSystem\Exceptions\Handler::class
+    IntelGUA\MedicalAssistant\Exceptions\Handler::class
 );
 
 /*
