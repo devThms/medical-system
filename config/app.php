@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        IntelGUA\MedicalSystem\Providers\AppServiceProvider::class,
+        IntelGUA\MedicalSystem\Providers\AuthServiceProvider::class,
+        // IntelGUA\MedicalSystem\Providers\BroadcastServiceProvider::class,
+        IntelGUA\MedicalSystem\Providers\EventServiceProvider::class,
+        IntelGUA\MedicalSystem\Providers\RouteServiceProvider::class,
 
     ],
 
