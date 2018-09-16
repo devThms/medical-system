@@ -3,7 +3,7 @@
 namespace IntelGUA\MedicalAssistant\Http\Controllers;
 
 use IntelGUA\MedicalAssistant\Models\Patient;
-use Illuminate\Http\Request;
+use IntelGUA\MedicalAssistant\Http\Requests\PatientRequest;
 
 class PatientController extends Controller
 {
@@ -14,7 +14,8 @@ class PatientController extends Controller
      */
     public function index()
     {
-        //
+        $patients = Patient::paginate(2);
+        return view('layouts.patients.index', compact('patients'));
     }
 
     /**
@@ -30,10 +31,10 @@ class PatientController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\PatientRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PatientRequest $request)
     {
         //
     }
@@ -46,7 +47,7 @@ class PatientController extends Controller
      */
     public function show(Patient $patient)
     {
-        //
+
     }
 
     /**
@@ -63,11 +64,11 @@ class PatientController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\PatientRequest  $request
      * @param  \IntelGUA\MedicalAssistant\Models\Patient  $patient
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Patient $patient)
+    public function update(PatientRequest $request, Patient $patient)
     {
         //
     }

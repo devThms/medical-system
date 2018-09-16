@@ -120,10 +120,10 @@ return [
             'icon' => 'file',
 
         ],
-        'ACCOUNT SETTINGS',
+        'Citas',
         [
-            'text' => 'Profile',
-            'url' => 'admin/settings',
+            'text' => 'Pacientes',
+            'url' => 'admin/patients',
             'icon' => 'user',
         ],
         [

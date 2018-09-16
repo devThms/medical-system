@@ -21,6 +21,7 @@ class CreatePatientsTable extends Migration
             $table->string('email', 150);
             $table->date('birth_date');
             $table->enum('gender', ['male', 'female']);
+            $table->string('photo', 250)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
