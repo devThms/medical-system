@@ -25,7 +25,7 @@ class PatientController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.patients.create');
     }
 
     /**
@@ -36,7 +36,19 @@ class PatientController extends Controller
      */
     public function store(PatientRequest $request)
     {
-        //
+        $patient = new Patient;
+        $patient->first_name = $request->input('first_name');
+        $patient->last_name = $request->input('last_name');
+        $patient->phone = $request->input('phone');
+        $patient->address = $request->input('address');
+        $patient->email = $request->input('email');
+        $patient->birth_date = $request->input('birth_date');
+        $patient->gender = $request->input('gender');
+        $patient->photo = $request->input('photo');
+
+        $patient->save();
+
+        return redirect()->route('layouts.patients.index');
     }
 
     /**

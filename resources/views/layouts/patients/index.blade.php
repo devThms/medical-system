@@ -1,16 +1,14 @@
-@extends('adminlte::page') 
-@section('title', 'Patients') 
+@extends('adminlte::page')
+@section('title', 'Patients')
 @section('content_header')
-<h1>Listado de pacientes</h1>
+<a class="btn btn-success pull-right" href="{{ url('/admin/patients/create') }}" role="button">Nuevo</a>
+<h1 class="text-primary">Listado de pacientes</h1>
+<br />
 
 
 
 
-
-
-
-
-@stop 
+@stop
 @section('content')
 <table class="table table-bordered table-hover">
     <thead>
@@ -43,11 +41,11 @@
         @endforeach
     </tbody>
 </table>
-{!! $patients->links() !!} 
-@stop 
+{!! $patients->links() !!}
+@stop
 @section('css')
-<link rel="stylesheet" href="/css/admin_custom.css"> 
-@stop 
+<link rel="stylesheet" href="/css/admin_custom.css">
+@stop
 @section('js')
 <script>
     console.log('Hi!');

@@ -18,6 +18,7 @@ class CreatePatientsTable extends Migration
             $table->string('first_name', 75);
             $table->string('last_name', 75);
             $table->string('phone', 15);
+            $table->string('address', 150);
             $table->string('email', 150);
             $table->date('birth_date');
             $table->enum('gender', ['male', 'female']);

@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('admin/patients', 'PatientController');
+Route::get('admin/patients/create', 'PatientController@create');
+Route::post('admin/patients/store', ['as' => 'layouts/patients/store', 'uses' => 'PacienteController@store']);
