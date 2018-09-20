@@ -3,6 +3,7 @@
 namespace IntelGUA\MedicalAssistant\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
 
 class PatientRequest extends FormRequest
 {
@@ -21,16 +22,39 @@ class PatientRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(Request $request)
     {
-        return [
-            'first_name' => 'required|max:75',
-            'last_name' => 'required|max:75',
-            'phone' => 'required|max:15|numeric|digits:8',
-            'address' => 'required|max:150',
-            'email' => 'required|unique:patients|email|max:150',
-            'birth_date' => 'required|',
-            'gender' => 'required'
-        ];
+        switch ($this->method()) {
+
+            case 'POST':
+                {
+                    return [
+                        'first_name' => 'required|max:75',
+                        'last_name' => 'required|max:75',
+                        'phone' => 'required|numeric|digits:8',
+                        'address' => 'required|max:150',
+                        'email' => 'required|unique:patients|email|max:150',
+                        'birth_date' => 'required',
+                        'gender' => 'required'
+                    ];
+                }
+            case 'PUT':
+            case 'PATCH':
+                {
+                    return [
+                        'first_name' => 'required|max:75',
+                        'last_name' => 'required|max:75',
+                        'phone' => 'required|numeric|digits:8',
+                        'address' => 'required|max:150',
+                        'email' => 'required|email|unique:patients,email,' . $request->get('id'), //TODO Configurar validación Email en el Edit
+                        'birth_date' => 'required',
+                        'gender' => 'required'
+                    ];
+                }
+            default:
+                break;
+        }
     }
+
+
 }

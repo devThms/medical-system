@@ -4,6 +4,8 @@ namespace IntelGUA\MedicalAssistant\Http\Controllers;
 
 use IntelGUA\MedicalAssistant\Models\Patient;
 use IntelGUA\MedicalAssistant\Http\Requests\PatientRequest;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
@@ -48,7 +50,7 @@ class PatientController extends Controller
 
         $patient->save();
 
-        return redirect()->route('layouts.patients.index');
+        return redirect()->route('patients.index');
     }
 
     /**
@@ -70,7 +72,7 @@ class PatientController extends Controller
      */
     public function edit(Patient $patient)
     {
-        //
+        return view("layouts.patients.edit", compact('patient'));
     }
 
     /**
@@ -82,7 +84,20 @@ class PatientController extends Controller
      */
     public function update(PatientRequest $request, Patient $patient)
     {
-        //
+        $patient->first_name = $request->input('first_name');
+        $patient->last_name = $request->input('last_name');
+        $patient->phone = $request->input('phone');
+        $patient->address = $request->input('address');
+        $patient->email = $request->input('email');
+        $patient->birth_date = $request->input('birth_date');
+        $patient->gender = $request->input('gender');
+        $patient->photo = $request->input('photo');
+
+        $patient->save();
+
+        return redirect()->route('patients.index');
+
+
     }
 
     /**
@@ -93,6 +108,9 @@ class PatientController extends Controller
      */
     public function destroy(Patient $patient)
     {
-        //
+        Alert::warning('Eliminar', 'Registro Eliminado');
+        $patient->delete();
+        return redirect()->route('patients.index');
+
     }
 }

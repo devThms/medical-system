@@ -116,7 +116,7 @@
             <section class="content">
 
                 @yield('content')
-
+                @include('sweetalert::alert')
             </section>
             <!-- /.content -->
             @if(config('adminlte.layout') == 'top-nav')
