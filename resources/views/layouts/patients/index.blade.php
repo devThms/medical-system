@@ -9,7 +9,7 @@
 <div class="box-header with-border">
     <h3 class="box-title"><b>Listado de Pacientes</b></h3>
     <div class="box-tools pull-right">
-    <a class="btn btn-success pull-right" href="{{ url('/admin/patients/create') }}" role="button"> <i class="fa fa-plus-square" aria-hidden="true"></i></a>
+    <a class="btn btn-success pull-right" href="{{ url('/admin/patients/create') }}" role="button"> <i class="fa fa-plus-square" aria-hidden="true"> Nuevo</i></a>
     </div><!-- /.box-tools -->
 </div><!-- /.box-header -->
 <div class="box-body">
@@ -37,13 +37,19 @@
             <td>{{ $patient->gender }}</td>
             <td>{{ $patient->birth_date }}</td>
             <td>
-            {!! Form::open(['route' => ['patients.destroy', $patient], 'method' => 'DELETE']) !!}
-                <a href="{{ route('patients.edit', ['patient' => $patient]) }}" class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cog" aria-hidden="true"> Acciones </i><span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ route('patients.show', ['patient' => $patient]) }}"><i class="fa fa-address-card" aria-hidden="true"> Detalles </i></a></li>
+                        <li><a href=""><i class="fa fa-folder" aria-hidden="true"> Antecedentes </i></a></li>
+                        {{-- <li role="separator" class="divider"></li>
+                        <li><a href="#"> </a></li> --}}
+                    </ul>
+                </div>
 
-                <button type="submit" class="btn btn-danger btn-xs">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-            {!! Form::close() !!}
             </td>
         </tr>
         @endforeach

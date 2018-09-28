@@ -82,7 +82,7 @@
           <div class="col-md-4">
             <div class="form-group {{ $errors->has('birth_date') ? ' has-error' : '' }}">
                 {!! Form::label('birth_date', 'Fecha de Nacimiento') !!}
-                {!! Form::date('birth_date', \Carbon\Carbon::now(), ['class' => 'form-control']) !!}
+                {!! Form::date('birth_date', null, ['class' => 'form-control']) !!}
                 @if ($errors->has('birth_date'))
                   <span class="help-block">
                   <strong>{{ $errors->first('birth_date')}}</strong>
@@ -114,8 +114,14 @@
           </div>
         </div>
 
-        <div class="form-group">
-              {!! Form::submit('Guardar', ['class' => 'btn btn-success'] ) !!}
+        <div class="row">
+            <div class="col-md-4">
+                {!! Form::submit('Guardar', ['class' => 'btn btn-success'] ) !!}
+            </div>
+
+            <div class="col-md-8">
+                <a href="{{ route('patients.show', ['patient' => $patient]) }}", class="btn btn-primary pull-right"><i class="fa fa-reply" aria-hidden="true"> Regresar </i></a>
+            </div>
         </div>
     {!! Form::close() !!}
 

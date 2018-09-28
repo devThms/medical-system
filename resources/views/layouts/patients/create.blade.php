@@ -72,8 +72,14 @@
             </div>
         </div>
 
-        <div class="form-group">
-            {!! Form::submit('Guardar', ['class' => 'btn btn-success'] ) !!}
+        <div class="row">
+            <div class="col-md-4">
+                {!! Form::submit('Guardar', ['class' => 'btn btn-success'] ) !!}
+            </div>
+
+            <div class="col-md-8">
+                <a href="{{ route('patients.index') }}", class="btn btn-primary pull-right"><i class="fa fa-reply" aria-hidden="true"> Regresar </i></a>
+            </div>
         </div>
     {!! Form::close() !!}
 
