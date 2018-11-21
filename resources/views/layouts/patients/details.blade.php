@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-<div class="box box-warning">
+<div class="box box-success">
     <div class="box-header with-border">
         <h3 class="box-title"><b>Detalles del Paciente</b></h3>
     <div class="box-tools pull-right">
@@ -23,7 +23,7 @@
 
                 <div class="form-group {{ $errors->has('first_name') ? ' has-error' : '' }}">
                     {!! Form::label('first_name', 'Nombre:', ['class' => 'col-sm-4 control-label']) !!}
-                    {!! Form::label('last_name', $patient->first_name, ['class' => 'col-sm-8 control-label']) !!}
+                    {!! Form::label('first_name', $patient->first_name, ['class' => 'col-sm-8 control-label']) !!}
                     @if ($errors->has('first_name'))
                         <span class="help-block">
                         <strong>{{ $errors->first('first_name')}}</strong>

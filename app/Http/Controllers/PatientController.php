@@ -6,6 +6,14 @@ use IntelGUA\MedicalAssistant\Models\Patient;
 use IntelGUA\MedicalAssistant\Http\Requests\PatientRequest;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
+use IntelGUA\MedicalAssistant\Models\Record;
+use IntelGUA\MedicalAssistant\Models\TypeBlood;
+use IntelGUA\MedicalAssistant\Models\Medicine;
+use IntelGUA\MedicalAssistant\Models\MedicineRecord;
+use IntelGUA\MedicalAssistant\Models\Disease;
+use IntelGUA\MedicalAssistant\Models\DiseaseRecord;
+use IntelGUA\MedicalAssistant\Models\Allergy;
+use IntelGUA\MedicalAssistant\Models\AllergyRecord;
 
 class PatientController extends Controller
 {
@@ -59,6 +67,7 @@ class PatientController extends Controller
      * @param  \IntelGUA\MedicalAssistant\Models\Patient  $patient
      * @return \Illuminate\Http\Response
      */
+
     public function show(Patient $patient)
     {
         $patient = Patient::find($patient->id);
@@ -113,6 +122,138 @@ class PatientController extends Controller
         Alert::warning('Eliminar', 'Registro Eliminado');
         $patient->delete();
         return redirect()->route('patients.index');
+
+    }
+
+    /** función para visualizar el formulario para crear el antecedente
+     * del paciente.
+     */
+    public function record(Patient $patient)
+    {
+        $typebloods = TypeBlood::pluck('description', 'id');
+        $medicines = Medicine::pluck('description', 'id');
+        $diseases = Disease::pluck('description', 'id');
+        $allergies = Allergy::pluck('description', 'id');
+
+        $patient = Patient::find($patient->id);
+
+        $record = Record::wherePatientId($patient->id)->first();
+
+        if ($record) {
+            return view('layouts.patients.record_details', compact('patient', 'record', 'medicines', 'diseases', 'allergies'));
+        } else {
+            return view('layouts.patients.record', compact('patient', 'typebloods'));
+        }
+    }
+
+    /**
+     * Función para visualizar los detalles del antecedente del paciente.
+     */
+    public function record_details(Record $record)
+    {
+        $patient = Patient::find($record->patient_id);
+        return view('layouts.patients.record_details', compact('record', 'patient'));
+    }
+
+    /**
+     * Método POST para guardar el antecedente del paciente.
+     */
+    public function saverecord(Request $request)
+    {
+        $record = new Record();
+
+        $record->patient_id = $request->input('patient_id');
+        $record->typeblood_id = $request->input('typeblood_id');
+        $record->weight = $request->input('weight');
+        $record->observation = $request->input('observation');
+
+        $record->save();
+
+        return redirect()->route('patients.record_details', [$record]);
+    }
+
+    /**
+     * Método POST para agregar un nuevo medicamento.
+     */
+    public function add_medicine(Request $request)
+    {
+        if ($request->ajax()) {
+            $medicine = Medicine::create($request->all());
+            return response()->json($medicine);
+        }
+    }
+
+    /**
+     * Método POST para asignar el medicamento al antecedente
+     * del paciente.
+     */
+    public function add_medicine_record(Request $request)
+    {
+        if ($request->ajax()) {
+            MedicineRecord::create($request->all());
+            return response()->json([$request->all()]);
+        }
+
+    }
+
+    /**
+     * Método POST para agregar una nueva enfermedad.
+     */
+    public function add_disease(Request $request)
+    {
+        if ($request->ajax()) {
+            Disease::create($request->all());
+            return response()->json([$request->all()]);
+        }
+    }
+
+    /**
+     * Método POST para asignar la enfermedad al antecedente
+     * del paciente.
+     */
+    public function add_disease_record(Request $request)
+    {
+        if ($request->ajax()) {
+            DiseaseRecord::create($request->all());
+            return response()->json([$request->all()]);
+        }
+
+    }
+
+
+    /**
+     * Método POST para agregar una nueva alergia.
+     */
+    public function add_allergy(Request $request)
+    {
+        if ($request->ajax()) {
+            Allergy::create($request->all());
+            return response()->json([$request->all()]);
+        }
+    }
+
+    /**
+     * Método POST para asignar la enfermedad al antecedente
+     * del paciente.
+     */
+    public function add_allergy_record(Request $request)
+    {
+        if ($request->ajax()) {
+            AllergyRecord::create($request->all());
+            return response()->json([$request->all()]);
+        }
+
+    }
+
+    /**
+     * Método GET para obtener la lista de medicamentos
+     */
+    public function get_medicine_records($id)
+    {
+
+        $medicine_records = MedicineRecord::whereRecordId($id)->with('medicine')->with('record')->get();
+
+        return response()->json($medicine_records);
 
     }
 }

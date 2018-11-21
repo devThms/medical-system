@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-<div class="box box-warning">
+<div class="box box-success">
     <div class="box-header with-border">
         <h3 class="box-title"><b>Modificar Pacientes</b></h3>
     <div class="box-tools pull-right">
@@ -66,14 +66,9 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+            <div class="form-group">
                 {!! Form::label('email', 'Correo Electronico') !!}
                 {!! Form::text('email', null, ['class' => 'form-control']) !!}
-                @if ($errors->has('email'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('email')}}</strong>
-                  </span>
-                @endif
             </div>
           </div>
         </div>
